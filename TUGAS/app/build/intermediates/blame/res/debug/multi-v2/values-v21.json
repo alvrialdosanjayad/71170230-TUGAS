@@ -4,6 +4,25 @@
             "outputFile": "C:\\Users\\ALDO\\Documents\\GitHub\\71170230-TUGAS\\TUGAS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\ALDO\\.gradle\\caches\\transforms-2\\files-2.1\\717dd50903df0f54f313409274e15d7f\\material-1.0.0-beta01\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,9,16,23",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,415,772,1126",
+                        "endLines": "8,15,22,29",
+                        "endColumns": "10,10,10,10",
+                        "endOffsets": "410,767,1121,1487"
+                    },
+                    "to": {
+                        "startLines": "267,274,281,288",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19758,20118,20475,20829",
+                        "endLines": "273,280,287,294",
+                        "endColumns": "10,10,10,10",
+                        "endOffsets": "20113,20470,20824,21190"
+                    }
+                },
+                {
                     "source": "C:\\Users\\ALDO\\.gradle\\caches\\transforms-2\\files-2.1\\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\\core-1.0.1\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
@@ -14,12 +33,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,263,264,265,266,267,270",
+                        "startLines": "2,3,4,5,263,264,265,266,295,298",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19262,19378,19504,19630,19758,19930",
-                        "endLines": "2,3,4,5,263,264,265,266,269,274",
+                        "startOffsets": "55,159,223,290,19262,19378,19504,19630,21195,21367",
+                        "endLines": "2,3,4,5,263,264,265,266,297,302",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19373,19499,19625,19753,19925,20263"
+                        "endOffsets": "154,218,285,349,19373,19499,19625,19753,21362,21700"
                     }
                 },
                 {
