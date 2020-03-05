@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String coba;
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.btn_Login);
         editText1 = findViewById(R.id.txt_edit);
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = editText1.getText().toString();
                 String pass = editText2.getText().toString();
                 Toast.makeText(getApplicationContext(),"Email: " +email+ " Password :" + pass,Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, halamanHome.class);
+                Intent intent = new Intent(MainActivity.this, PageHome.class);
                 startActivity(intent);
             }
         });
