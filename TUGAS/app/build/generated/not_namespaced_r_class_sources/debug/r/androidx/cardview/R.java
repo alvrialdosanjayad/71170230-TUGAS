@@ -19,11 +19,11 @@ public final class R {
         public static final int cardPreventCornerOverlap = 0x7f03005e;
         public static final int cardUseCompatPadding = 0x7f03005f;
         public static final int cardViewStyle = 0x7f030060;
-        public static final int contentPadding = 0x7f03009a;
-        public static final int contentPaddingBottom = 0x7f03009b;
-        public static final int contentPaddingLeft = 0x7f03009c;
-        public static final int contentPaddingRight = 0x7f03009d;
-        public static final int contentPaddingTop = 0x7f03009e;
+        public static final int contentPadding = 0x7f03009d;
+        public static final int contentPaddingBottom = 0x7f03009e;
+        public static final int contentPaddingLeft = 0x7f03009f;
+        public static final int contentPaddingRight = 0x7f0300a0;
+        public static final int contentPaddingTop = 0x7f0300a1;
     }
     public static final class color {
         private color() {}
@@ -44,14 +44,14 @@ public final class R {
         private style() {}
 
         public static final int Base_CardView = 0x7f0e000c;
-        public static final int CardView = 0x7f0e00bd;
-        public static final int CardView_Dark = 0x7f0e00be;
-        public static final int CardView_Light = 0x7f0e00bf;
+        public static final int CardView = 0x7f0e00c3;
+        public static final int CardView_Dark = 0x7f0e00c4;
+        public static final int CardView_Light = 0x7f0e00c5;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] CardView = { 0x101013f, 0x1010140, 0x7f03005a, 0x7f03005b, 0x7f03005c, 0x7f03005d, 0x7f03005e, 0x7f03005f, 0x7f03009a, 0x7f03009b, 0x7f03009c, 0x7f03009d, 0x7f03009e };
+        public static final int[] CardView = { 0x101013f, 0x1010140, 0x7f03005a, 0x7f03005b, 0x7f03005c, 0x7f03005d, 0x7f03005e, 0x7f03005f, 0x7f03009d, 0x7f03009e, 0x7f03009f, 0x7f0300a0, 0x7f0300a1 };
         public static final int CardView_android_minWidth = 0;
         public static final int CardView_android_minHeight = 1;
         public static final int CardView_cardBackgroundColor = 2;

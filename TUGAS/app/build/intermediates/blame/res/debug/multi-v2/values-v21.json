@@ -4,22 +4,22 @@
             "outputFile": "C:\\Users\\ALDO\\Documents\\GitHub\\71170230-TUGAS\\TUGAS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ALDO\\.gradle\\caches\\transforms-2\\files-2.1\\717dd50903df0f54f313409274e15d7f\\material-1.0.0-beta01\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\ALDO\\.gradle\\caches\\transforms-2\\files-2.1\\767612e54049c1347a891905a7e9d5e4\\media-1.0.0\\res\\values-v21\\values-v21.xml",
                     "from": {
-                        "startLines": "2,9,16,23",
+                        "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "55,415,772,1126",
-                        "endLines": "8,15,22,29",
-                        "endColumns": "10,10,10,10",
-                        "endOffsets": "410,767,1121,1487"
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
                     },
                     "to": {
-                        "startLines": "267,274,281,288",
+                        "startLines": "265,268,272,276",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "19758,20118,20475,20829",
-                        "endLines": "273,280,287,294",
-                        "endColumns": "10,10,10,10",
-                        "endOffsets": "20113,20470,20824,21190"
+                        "startOffsets": "19504,19672,19961,20257",
+                        "endLines": "267,270,274,278",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "19667,19830,20124,20419"
                     }
                 },
                 {
@@ -33,12 +33,31 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,263,264,265,266,295,298",
+                        "startLines": "2,3,4,5,263,264,271,275,311,314",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19262,19378,19504,19630,21195,21367",
-                        "endLines": "2,3,4,5,263,264,265,266,297,302",
+                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,22137,22309",
+                        "endLines": "2,3,4,5,263,264,271,275,313,318",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19373,19499,19625,19753,21362,21700"
+                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,22304,22642"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ALDO\\.gradle\\caches\\transforms-2\\files-2.1\\c7eb9cd3508ac3959447c14fd76c9fb9\\material-1.0.0\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,10,18,26",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,484,910,1333",
+                        "endLines": "9,17,25,33",
+                        "endColumns": "10,10,10,10",
+                        "endOffsets": "479,905,1328,1763"
+                    },
+                    "to": {
+                        "startLines": "279,287,295,303",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "20424,20853,21279,21702",
+                        "endLines": "286,294,302,310",
+                        "endColumns": "10,10,10,10",
+                        "endOffsets": "20848,21274,21697,22132"
                     }
                 },
                 {

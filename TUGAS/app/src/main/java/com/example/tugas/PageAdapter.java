@@ -1,5 +1,6 @@
 package com.example.tugas;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -9,34 +10,35 @@ import java.util.List;
 
 public class PageAdapter extends FragmentPagerAdapter {
 
-    private List<String> IsTab;
-    private List<Fragment> IsFragment;
+    private int numoftabs;
 
-    public PageAdapter(FragmentManager fn, List<String> IsTab){
-        super(fn);
-        this.IsTab = IsTab;
-        IsFragment = new ArrayList<>();
+    public PageAdapter(FragmentManager fm , int numOfTabs) {
+        super(fm);
+        this.numoftabs = numOfTabs;
     }
+
     @Override
     public Fragment getItem(int position) {
-        Fragment frag = null;
-        if (IsFragment.size() > position) frag =  IsFragment.get(position);
-
-        if (IsTab.get(position).equals("Pesan")) {
-            frag =  new HomePragment();
-            IsFragment.add(frag);
-        }else if (IsTab.get(position).equals("Status")){
-            frag =  new StatusFragment();
-            IsFragment.add(frag);
-        }else if (IsTab.get(position).equals("Panggilan")){
-            frag =  new PanggilanFragment();
-            IsFragment.add(frag);
+        switch (position){
+            case 0 :
+                return new HomePragment();
+            case 1 :
+                return new StatusFragment();
+            case 2   :
+                return new PanggilanFragment();
+            default:
+                return null;
         }
-        return null;
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return numoftabs;
+    }
+
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
     }
 }
