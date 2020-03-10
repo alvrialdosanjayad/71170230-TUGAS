@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="putih">#f0f0f0</color>
+    <color name="colorSeaGreen">#04d8d3</color>
+    <color name="hijau">#148B10</color>#
 </resources>

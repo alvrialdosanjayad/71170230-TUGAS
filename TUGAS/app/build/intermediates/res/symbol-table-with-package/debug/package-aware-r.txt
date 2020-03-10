@@ -611,6 +611,7 @@ color cardview_shadow_start_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color colorSeaGreen
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
 color design_default_color_primary_dark
@@ -634,6 +635,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color hijau
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -682,6 +684,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color putih
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1187,8 +1190,8 @@ id start
 id stretch
 id submenuarrow
 id submit_area
+id tab
 id tabMode
-id tabs
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1219,8 +1222,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id viewPager
 id view_offset_helper
-id view_pager
 id visible
 id withText
 id wrap
@@ -1289,8 +1292,8 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout layout_home
 layout layout_panggilan
-layout layout_pesan
 layout layout_status
 layout notification_action
 layout notification_action_tombstone

@@ -18,7 +18,6 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.tugas.PageHome" />
         <activity android:name="com.example.tugas.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

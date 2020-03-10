@@ -3,7 +3,10 @@ package com.example.tugas;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -14,24 +17,17 @@ public class PageHome extends AppCompatActivity {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_home);
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager()));
 
-        List<String> isTab = new ArrayList<>();
-        isTab.add("Pesan");
-        isTab.add("Status");
-        isTab.add("Panggilan");
-
-        for (int i = 0;i < isTab.size(); i++){
-            tabLayout.addTab(tabLayout.newTab().setText(isTab.get(i)));
-        }
-
-        PageAdapter adapter = new PageAdapter(getSupportFragmentManager(), isTab);
-        viewPager.setAdapter(adapter);
-        viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        TabLayout tabLayout = findViewById(R.id.tab);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0);
+        tabLayout.getTabAt(1);
     }
 }

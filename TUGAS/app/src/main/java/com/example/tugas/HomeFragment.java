@@ -5,12 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
-
-public class HomePragment extends Fragment {
-
+public class HomeFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntancesState){
-        View view = inflater.inflate(R.layout.layout_pesan,container,false);
+        View view = inflater.inflate(R.layout.layout_home,container,false);
         return view;
     }
 }
