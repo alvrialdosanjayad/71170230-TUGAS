@@ -12,9 +12,9 @@ public class PageAdapter extends FragmentPagerAdapter {
     public PageAdapter(FragmentManager fn){
         super(fn);
         activities = new Fragment[]{
-                new HomeFragment(),
-                new StatusFragment(),
-                new PanggilanFragment(),
+                new Home(),
+                new Status(),
+                new Panggilan(),
         };
     }
 
