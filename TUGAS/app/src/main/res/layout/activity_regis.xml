@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorSeaGreen">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:id="@+id/txt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:id="@+id/txt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_Regis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hijau"
+            android:textColor="@color/putih"
+            android:text="Regis" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_Batal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hijau"
+            android:textColor="@color/putih"
+            android:text="Batal" />
+    </LinearLayout>
+</LinearLayout>
