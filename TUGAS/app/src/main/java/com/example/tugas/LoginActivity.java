@@ -2,6 +2,7 @@ package com.example.tugas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -24,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         String cek = preferences.getString("ingat","");
 
         if(cek.equals("true")){
-            Intent intent = new Intent(LoginActivity.this, PageUtama.class);
+            Intent intent = new Intent(LoginActivity.this, PageUtamaActivity.class);
             startActivity(intent);
         }
 
@@ -47,23 +48,36 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = loginEmail.getText().toString();
                 String pass = loginPass.getText().toString();
+                broadcaster();
+
                 Boolean checkMail = db.checkLogin(email,pass);
                 if(checkMail==true){
-                    Toast.makeText(getApplicationContext(),"Login Berhasil",Toast.LENGTH_SHORT).show();
+//                  Toast.makeText(getApplicationContext(),"Login Berhasil",Toast.LENGTH_SHORT).show();
 
                     SharedPreferences preferen = getSharedPreferences("masuk",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferen.edit();
                     editor.putString("ingat","true");
                     editor.apply();
 
-                    Intent intent = new Intent(LoginActivity.this, PageUtama.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("KEY",email);
+                    Intent intent = new Intent(LoginActivity.this, PageUtamaActivity.class);
+                    intent.putExtras(extras);
                     startActivity(intent);
+                    loginEmail.getText().clear();
+                    loginPass.getText().clear();
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Email/Password is Wrong",Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
+    }
+
+    private void broadcaster(){
+        Intent broadcasterIntent = new Intent("My_ACTION");
+        broadcasterIntent.setComponent(new ComponentName(getPackageName(),"com.example.tugas.MyBroadcastReciver"));
+        getApplicationContext().sendBroadcast(broadcasterIntent);
     }
 }
