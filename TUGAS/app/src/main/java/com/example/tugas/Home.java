@@ -23,8 +23,7 @@ public class Home extends Fragment {
                 SharedPreferences.Editor editor = preferen.edit();
                 editor.putString("ingat","false");
                 editor.apply();
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                getActivity().finish();
             }
         });
         return view;
