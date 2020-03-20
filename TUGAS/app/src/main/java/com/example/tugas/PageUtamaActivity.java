@@ -3,14 +3,20 @@ package com.example.tugas;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
@@ -18,10 +24,12 @@ import static com.example.tugas.WifiConnect.CONNECT_WIFI;
 import static com.example.tugas.WifiConnect.DISCONNECT_WIFI;
 
 public class PageUtamaActivity extends AppCompatActivity {
-
+    private static final String TAG = "PageUtamaActivity";
+    private static String MY_FLAG = "MY_FLAG";
     private NotificationManagerCompat notificationCompat;
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    private LocalBroadcastManager localBroadcastManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +53,7 @@ public class PageUtamaActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         registerReceiver(wificheck, new IntentFilter(WifiManager.WIFI_STATE_CHANGED_ACTION));
     }
@@ -84,4 +92,26 @@ public class PageUtamaActivity extends AppCompatActivity {
             }
         }
     };
+
+    public void ScheduleJob(View view){
+        ComponentName componentName = new ComponentName(getApplicationContext(),JobServiceMe.class);
+        JobInfo info = new JobInfo.Builder(123,componentName)
+                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
+                .setPersisted(true)
+                .setPeriodic(15 * 60 * 1000)
+                .build();
+        JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+        int resultCode = scheduler.schedule(info);
+        if(resultCode == JobScheduler.RESULT_SUCCESS){
+            Log.i(TAG,"scheduleJob: Job Scheduled");
+        }else{
+            Log.i(TAG,"scheduleJob: Job Scheduled failed");
+        }
+    }
+
+    public void cancelJob(View view){
+        JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+        scheduler.cancel(123);
+        Log.i(TAG,"cancelJob");
+    }
 }
