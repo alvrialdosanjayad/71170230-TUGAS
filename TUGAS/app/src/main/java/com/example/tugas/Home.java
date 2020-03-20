@@ -1,5 +1,6 @@
 package com.example.tugas;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,10 +13,12 @@ import androidx.fragment.app.Fragment;
 import static android.content.Context.MODE_PRIVATE;
 
 public class Home extends Fragment {
-    private Button logout;
+    private Button logout,mulai,berhenti;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntancesState){
         View view = inflater.inflate(R.layout.layout_home,container,false);
         logout = view.findViewById(R.id.button);
+        mulai = view.findViewById(R.id.mulai);
+        berhenti = view.findViewById(R.id.berhenti);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,5 +31,7 @@ public class Home extends Fragment {
         });
         return view;
     }
+
+
 
 }
