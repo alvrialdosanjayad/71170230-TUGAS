@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">TUGAS</string>
+
+    <string-array name="nama_film">
+        <item>A Quiet Place</item>
+        <item>Annabelle</item>
+        <item>Chucky</item>
+        <item>Dilan</item>
+        <item>Onward</item>
+        <item>Jane Doe</item>
+        <item>Pengabdi Setan</item>
+        <item>Train To Busan</item>
+        <item>Venom</item>
+    </string-array>
+
+    <string-array name="Deskripsi">
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+        <item>Ini Film Seru</item>
+    </string-array>
 </resources>
