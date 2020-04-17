@@ -23,6 +23,9 @@ import com.example.tugas.JobServiceMe;
 import com.example.tugas.Fragment.PageAdapter;
 import com.example.tugas.R;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.Objects;
+
 import static com.example.tugas.WifiConnect.CONNECT_WIFI;
 import static com.example.tugas.WifiConnect.DISCONNECT_WIFI;
 
@@ -47,12 +50,24 @@ public class PageUtamaActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabCount();
 
+
+//        mengambil nilai dari home
+
+//        Bundle bundle = getIntent().getExtras();
+//        if(bundle != null){
+//            String isiBundle = bundle.getString("KEY","");
+//            Toast.makeText(getApplicationContext(),isiBundle,Toast.LENGTH_SHORT).show();
+//        }
+        tampil();
+
+    }
+
+    private void tampil(){
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             String isiBundle = bundle.getString("KEY","");
             Toast.makeText(getApplicationContext(),isiBundle,Toast.LENGTH_SHORT).show();
         }
-
     }
 
     @Override
@@ -104,7 +119,7 @@ public class PageUtamaActivity extends AppCompatActivity {
                 .setPeriodic(15 * 60 * 1000)
                 .build();
         JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
-        int resultCode = scheduler.schedule(info);
+        int resultCode = Objects.requireNonNull(scheduler).schedule(info);
         if(resultCode == JobScheduler.RESULT_SUCCESS){
             Log.i(TAG,"scheduleJob: Job Scheduled");
         }else{
@@ -114,7 +129,7 @@ public class PageUtamaActivity extends AppCompatActivity {
 
     public void cancelJob(View view){
         JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
-        scheduler.cancel(123);
+        Objects.requireNonNull(scheduler).cancel(123);
         Log.i(TAG,"cancelJob");
     }
 

@@ -15,9 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.DetailFilm"
-            android:parentActivityName=".Activity.PageUtamaActivity"
-            android:label="Details"/>
+        <activity
+            android:name=".UpdateMahasiswa"
+            android:label="Update Mahasiswa"
+            android:parentActivityName=".TambahMahasiswa"/>
+        <activity
+            android:name=".TambahMahasiswa"
+            android:label="Tambah Mahasiswa"
+            android:parentActivityName=".Activity.PageUtamaActivity" />
+        <activity
+            android:name=".Activity.DetailFilm"
+            android:label="Details"
+            android:parentActivityName=".Activity.PageUtamaActivity" />
         <activity android:name=".Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

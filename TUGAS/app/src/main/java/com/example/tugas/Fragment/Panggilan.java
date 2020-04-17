@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tugas.R;
 
+import java.util.Objects;
+
 import static android.content.Context.MODE_PRIVATE;
 
 public class Panggilan extends Fragment {
@@ -23,7 +25,7 @@ public class Panggilan extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences preferen = getActivity().getSharedPreferences("masuk", MODE_PRIVATE);
+                SharedPreferences preferen = Objects.requireNonNull(getActivity()).getSharedPreferences("masuk", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferen.edit();
                 editor.putString("ingat","false");
                 editor.apply();
