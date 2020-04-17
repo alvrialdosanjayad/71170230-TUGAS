@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugas.R;
-import com.example.tugas.RecyclerviewAdapter;
+import com.example.tugas.RecyclerviewHomeAdapter;
 
 public class Home extends Fragment {
     RecyclerView recyclerView;
@@ -22,8 +22,8 @@ public class Home extends Fragment {
         s1 = getResources().getStringArray(R.array.nama_film);
         s2 = getResources().getStringArray(R.array.Deskripsi);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
-        RecyclerviewAdapter recyclerviewAdapter = new RecyclerviewAdapter(getContext(),s1,s2,images);
-        recyclerView.setAdapter(recyclerviewAdapter);
+        RecyclerviewHomeAdapter recyclerviewHomeAdapter = new RecyclerviewHomeAdapter(getContext(),s1,s2,images);
+        recyclerView.setAdapter(recyclerviewHomeAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
     }

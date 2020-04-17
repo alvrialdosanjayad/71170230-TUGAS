@@ -14,13 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugas.Activity.DetailFilm;
 
-public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.MyViewHolder> {
+public class RecyclerviewHomeAdapter extends RecyclerView.Adapter<RecyclerviewHomeAdapter.MyViewHolder> {
 
     String data1[], data2[];
     int images[];
     Context context;
 
-    public  RecyclerviewAdapter(Context context, String s[], String s2[], int img[]){
+    public RecyclerviewHomeAdapter(Context context, String s[], String s2[], int img[]){
         this.context = context;
         this.data1 = s;
         this.data2 = s2;
@@ -59,7 +59,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView myText,myText2;
+        TextView myText, myText2;
         ImageView myImage;
         LinearLayout mainLayout;
 

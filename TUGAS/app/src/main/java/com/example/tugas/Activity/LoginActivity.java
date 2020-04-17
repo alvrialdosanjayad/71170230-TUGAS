@@ -51,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = loginEmail.getText().toString();
                 String pass = loginPass.getText().toString();
-                broadcaster();
 
                 Boolean checkMail = db.checkLogin(email,pass);
                 if(checkMail==true){
@@ -78,9 +77,4 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void broadcaster(){
-        Intent broadcasterIntent = new Intent("My_ACTION");
-        broadcasterIntent.setComponent(new ComponentName(getPackageName(),"com.example.tugas.MyBroadcastReciver"));
-        getApplicationContext().sendBroadcast(broadcasterIntent);
-    }
 }
