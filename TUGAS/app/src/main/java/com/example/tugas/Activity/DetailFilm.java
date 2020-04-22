@@ -10,10 +10,12 @@ import android.widget.Toast;
 import com.example.tugas.R;
 
 public class DetailFilm extends AppCompatActivity {
-    String data1, data2;
-    int images;
-    ImageView mainImageView;
-    TextView judul,deskripsi;
+    private String data1;
+    private String data2;
+    private int images;
+    private ImageView mainImageView;
+    private TextView judul;
+    private TextView deskripsi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

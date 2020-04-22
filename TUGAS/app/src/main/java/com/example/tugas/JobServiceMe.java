@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class JobServiceMe extends android.app.job.JobService {
     private final String TAG = JobServiceMe.class.getSimpleName();
     private boolean jobCancelled = false;
-    Context context;
+    private Context context;
 
     @Override
     public boolean onStartJob(JobParameters params) {

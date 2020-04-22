@@ -2,7 +2,6 @@ package com.example.tugas;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ public class FirestoreAdapter extends FirestoreRecyclerAdapter<Mahasiswa, Firest
 
 
     private FirebaseFirestore firebaseFirestore;
-    Context context;
+    private Context context;
 
     public FirestoreAdapter(@NonNull FirestoreRecyclerOptions<Mahasiswa> options, Context context) {
         super(options);
@@ -83,7 +82,7 @@ public class FirestoreAdapter extends FirestoreRecyclerAdapter<Mahasiswa, Firest
         TextView nim, namaMahasiswa, phone;
         Button hapus, upload;
 
-        public MahasiswaViewHolder(@NonNull View itemView) {
+        MahasiswaViewHolder(@NonNull View itemView) {
             super(itemView);
             firebaseFirestore = FirebaseFirestore.getInstance();
             hapus = itemView.findViewById(R.id.hapusMahasiswaButton);

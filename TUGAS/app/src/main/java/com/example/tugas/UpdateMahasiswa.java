@@ -15,9 +15,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class UpdateMahasiswa extends AppCompatActivity {
-    String data1, data2, data3, id;
-    EditText noMhs,namaMhs,phone;
-    Button upload;
+    private String data1;
+    private String data2;
+    private String data3;
+    private String id;
+    private EditText noMhs;
+    private EditText namaMhs;
+    private EditText phone;
+    private Button upload;
     private FirebaseFirestore firebaseFirestoreDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

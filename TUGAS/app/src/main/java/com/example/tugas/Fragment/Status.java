@@ -13,7 +13,7 @@ import com.example.tugas.TambahMahasiswa;
 import com.example.tugas.R;
 
 public class Status extends Fragment {
-    Button tambah;
+    private Button tambah;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntancesState){
         View view = inflater.inflate(R.layout.fragment_status,container,false);
         tambah = view.findViewById(R.id.tambahMahasiswaAwal);
