@@ -16,9 +16,10 @@ import com.example.tugas.Activity.DetailFilm;
 
 public class RecyclerviewHomeAdapter extends RecyclerView.Adapter<RecyclerviewHomeAdapter.MyViewHolder> {
 
-    String data1[], data2[];
-    int images[];
-    Context context;
+    private String[] data1;
+    private String[] data2;
+    private int[] images;
+    private Context context;
 
     public RecyclerviewHomeAdapter(Context context, String s[], String s2[], int img[]){
         this.context = context;
@@ -63,7 +64,7 @@ public class RecyclerviewHomeAdapter extends RecyclerView.Adapter<RecyclerviewHo
         ImageView myImage;
         LinearLayout mainLayout;
 
-        public MyViewHolder(@NonNull View itemView) {
+        MyViewHolder(@NonNull View itemView) {
             super(itemView);
             myText = itemView.findViewById(R.id.judulFilm);
             myText2 = itemView.findViewById(R.id.deskripsiFilm);

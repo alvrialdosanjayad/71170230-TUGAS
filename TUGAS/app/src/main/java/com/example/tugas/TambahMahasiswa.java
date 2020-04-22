@@ -23,8 +23,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class TambahMahasiswa extends AppCompatActivity {
 
-    EditText noMhs,namaMhs,phoneMhs;
-    Button tambah;
+    private EditText noMhs;
+    private EditText namaMhs;
+    private EditText phoneMhs;
+    private Button tambah;
 
     private RecyclerView mtampil;
     private FirebaseFirestore firebaseFirestoreDb;
@@ -82,6 +84,7 @@ public class TambahMahasiswa extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(TambahMahasiswa.this, "Mahasiswa berhasil didaftarkan", Toast.LENGTH_SHORT).show();
+                        Log.d("TAG", "Mahasiswa berhasil didaftarkan");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

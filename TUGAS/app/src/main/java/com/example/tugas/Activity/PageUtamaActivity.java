@@ -51,24 +51,18 @@ public class PageUtamaActivity extends AppCompatActivity {
         tabLayout.getTabCount();
 
 
-//        mengambil nilai dari home
 
+//        tampil();
+
+    }
+
+//    private void tampil(){
 //        Bundle bundle = getIntent().getExtras();
 //        if(bundle != null){
-//            String isiBundle = bundle.getString("KEY","");
+//            String isiBundle = bundle.getString("DataSaya","");
 //            Toast.makeText(getApplicationContext(),isiBundle,Toast.LENGTH_SHORT).show();
 //        }
-        tampil();
-
-    }
-
-    private void tampil(){
-        Bundle bundle = getIntent().getExtras();
-        if(bundle != null){
-            String isiBundle = bundle.getString("KEY","");
-            Toast.makeText(getApplicationContext(),isiBundle,Toast.LENGTH_SHORT).show();
-        }
-    }
+//    }
 
     @Override
     public void onStart() {
