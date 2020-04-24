@@ -19,6 +19,7 @@ public class PageAdapter extends FragmentPagerAdapter {
                 new Home(),
                 new Status(),
                 new Panggilan(),
+                new Camera(),
         };
     }
 
