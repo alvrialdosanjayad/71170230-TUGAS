@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,25 +10,33 @@
         android:id="@+id/gambarDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/a_quiet_place"/>
+        android:layout_marginTop="128dp"
+        android:src="@drawable/a_quiet_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="gambar" />
 
     <TextView
         android:id="@+id/judulFilmDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Title"
-        android:textSize="24dp"
+        android:layout_marginTop="44dp"
         android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold" />
+        android:text="Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gambarDetail" />
 
     <TextView
         android:id="@+id/deskripsiFilmDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:gravity="center"
         android:text="Deskripsi"
-        android:textSize="16dp" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulFilmDetail" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

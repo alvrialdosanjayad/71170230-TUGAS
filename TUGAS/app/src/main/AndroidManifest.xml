@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:name=".WifiConnect"
         android:allowBackup="true"
@@ -27,6 +29,7 @@
         <activity
             android:name=".Activity.DetailFilm"
             android:label="Details"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName=".Activity.PageUtamaActivity" />
         <activity android:name=".Activity.LoginActivity">
             <intent-filter>
@@ -36,7 +39,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.RegisActivity" />
-        <activity android:name=".Activity.PageUtamaActivity" />
+        <activity
+            android:label="Home"
+            android:configChanges="orientation|screenSize"
+            android:name=".Activity.PageUtamaActivity" />
 
         <service
             android:name=".JobServiceMe"
