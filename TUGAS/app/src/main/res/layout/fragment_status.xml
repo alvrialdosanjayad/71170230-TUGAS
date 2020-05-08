@@ -26,4 +26,14 @@
         android:background="@color/hijau"
         android:textColor="@color/putih"/>
 
+    <Button
+        android:id="@+id/lokasi"
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Lokasi Saya"
+        android:textSize="10pt"
+        android:background="@color/hijau"
+        android:textColor="@color/putih"/>
+
 </LinearLayout>

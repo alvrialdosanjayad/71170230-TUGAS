@@ -1,4 +1,4 @@
-package com.example.tugas;
+package com.example.tugas.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.tugas.FirestoreAdapter;
+import com.example.tugas.Mahasiswa;
+import com.example.tugas.R;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.firebase.ui.firestore.SnapshotParser;
 
